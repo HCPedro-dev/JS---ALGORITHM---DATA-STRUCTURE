@@ -1,0 +1,32 @@
+---- CAP 1 ----
+-> Merge Sort?: ordenação por mistura;
+-> QuickSort?: ordenação rapida;
+
+--- PESQUISA BINÁRIA ---
+-> imagine uma agenda e voce esta procurando a letra M, não faz sentido começão a busca na agenda pela  
+   letra A, pois assim demora mais tempo, forma mais lógica será começar pelo meio e assim fazer uma busca
+   mais intensa e rápida;
+   PESQUISA BINÁRIA É UM ALGORITMO: sua entrada é uma lista ordenada de elementos, se o elemento que está na busca
+   está na lista, a pesquisa retorna sua localização, caso contrario RETURN NONE.
+   EX:
+   A pesquisa binária te leva ao objetivo mais rápido, digamos que tenha uma sequÊncia de 0 à 100, e o número escolhido é 57 e tenha um numero
+   selecionado entre esta sequência, a forma mais correta de se descrobrir o número mais rápido é atraves da busca 
+   binária, sendo feita da seguinte forma.
+   1º: pega a sequência de 0 à 100 e escoha o numero pela metada 50 valide se está proximo ou não;
+   2º: agora temos 50 numeros para checar, seguimos realizando da mesma forma escolha o numero 75;
+   3º: sobrou somente 25, quebre novamente pela metade, 63;
+   4º: agora sobrou somente 13, entre 50 hà 63;
+   5º: quebre novamente pela metade, 7 sobrou de 50 à 57;
+   6º: chegamos ao numero escolhido 57;
+   nota que levamos 6 etapas para chegar ao numero desejado, economizando tempo e memória.
+   
+*** PESQUISA BINÁRIA SÓ FUNCIONA EM LISTA ORGDENDAS***
+
+      
+   EXERCÍCIO:
+1.1 Suponha que você tenha uma lista com 128 nomes e esteja fazendo uma
+    pesquisa binária. Qual seria o número máximo de etapas que você levaria
+    para encontrar o nome desejado? 7 
+	
+1.2 Suponha que você duplique o tamanho da lista. Qual seria o número
+     máximo de etapas agora? 8

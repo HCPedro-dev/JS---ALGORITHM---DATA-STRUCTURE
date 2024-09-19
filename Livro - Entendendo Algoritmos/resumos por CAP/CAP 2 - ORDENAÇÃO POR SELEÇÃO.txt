@@ -1,0 +1,121 @@
+----- ORDENAÇÃO POR SELEÇÃO -----
+
+-> ARRAYS;
+-> LISTAS ENCADEADAS;
+
+
+--> COMO FUNCIONA A MEMORIA 
+
+    Imagine um armario, composto de várias gavetas e algumas estão disponíveis cada gaveta pode guardar 1 
+	item, voce deseja guardar 2 itens nesta maneira irá precisar utilizar duas gavetas;
+	
+	feØffeeb =  endereço de memória 
+	
+	
+--> ARRAYS E LISTAS ENCADEADAS 
+    Suponhamos que esteja escrevendo um aplicativo para gerenciar os seus afazeres e será necessário armazenar
+	uma lista na memória
+	utilizando primeiro um array para armazenar os afazeres, significa que todas as suas tarefas estão armazenadas
+	contiguamente uma ao lado da outra na memória.
+	
+	" é como se chegasse ao cinema com um grupode 4 amigos que já compraram o ingresso, e aparecesse um amigo atrasado
+	e quisse entrar na mesma sessão e os 4 ingressos comprados nesta fileira, teriam que ser todos realocados em uma nova
+	fileira com 5 vagas"
+	
+	
+--> ARRAY
+	e assim seria cada vez que novo elemento aparece para ser adicionado no array, por ter tamanho fixo ele deve ser 
+	realocado toda vez que aumenta de tamanho.
+	
+	Embora os arrays mesmo tenha um tamanho fixo e puder ser previsto um tamanho exemplo: se aloca 10 espaços e se utiliza 
+	somente 5 teremos mais 5 lugares vagos pois nínguem poderá utilizar.
+	Outro ponto é se o array ultrapassar o tamanho necessário, terá que ser realizado nova requisição de memória para 
+	alocar o mesmo.
+	
+
+--> LISTAS ENCADEADAS 
+    Com as listas encadeadas os itens podem estar alocados em qualquer lugar, exemplo: 
+	como se o grupo de amigos tenha 5 e chegasse um novo amigo formando 6, ele poderá assistir o filme em um outro lugar 
+	da sala de cinema, sem precisar previamente comprar o ingresso.
+
+
+--> ARRAYS
+    Existe uma tecnica surrateira usada por alguns sites que fazem uma LISTA TOP 10, ao em vez de listar tudo e compilar 
+	em uma unica pagina, eles usam do artificio de criar 10 paginas e fazer clicar em PROXIMO até a ultima pagina.
+	Mas fica chato clicar em 10 nomes, listas encadeadas tem o um problema similar, suponha que queria ler o ultimo item 
+	de uma lista encadeada, voce terá que percorrer todos os 10 itens até chegar ao fim. 
+	Listas encadeadas são boas se deseja passar por TODOS OS ITENS até o fim, um de cada vez.
+	
+	ARRAYS é mais simples este processo, voce sabe o endereço de cada item, suponha que seu array tenha 5 itens e voce 
+	sabe que o primeiro esta no endereço 00,	QUAL SERIA O ENDEREÇO DO ITEM 5?   r: 04
+	os elementos pode ser buscado instataneamente na memória, então faz essa buscar ser mais rápida.
+	
+	
+--> TERMINOLOGIA 
+    os endereços começam com a marcação de 0, a posição de um elemento é chamada de INDICE, por tanto deve ser dito da 
+	seguinte forma  O ITEM 5 ESTA NO ÍNDICE 04.
+	
+
+
+EX-> Suponha que esteja criando um app para acompanhar as finanças do mês.
+     
+	*Todos os dias deve se anotar tudo que foi gasto e onde gastou, ao final do mês deverá ser possível acessar e revisar 
+	 todos os gastos realizados e resumir o quanto foi gasto. Logo, teremos varias inserções e poucas leituras.
+	 
+ 1->Voce deverá usar um array ou uma lista para implementar este aplicativo? R: pode ser usada uma lista devido a quantidade
+                                                                                de inserções e ao final ter que revisitar todos
+																				os gastos realizado ao mês, desta maneira, poderá
+																				consultar cada gastos e realizar a contagem final
+																				revisitando cada item da lista.
+ 
+EX-> Inserindo algo no meio da lista.
+    *Existe uma lista de tarefas, mas agora esta lista se deve parecer mais com um calendário. Antes adicionava o item 
+     e este item ia para o fim da listam, agora quer adicionar as tarefas em ordem que elas devem ser realizadas.
+ 
+ 1->Para esta mudança seria melhor inserir elementos no meio de uma lista: ARRAY ou LISTAS ENCADEADAS? R: neste caso a listas encadeadas
+                                                                                                          tem o comportamento mais adequado
+																										  pois terá que somente apontar o 
+																										  elemento anterior ao novo elemento
+																										  já o array caso não haja espaços
+																										  terá que ser alocado em um novo
+																										  local na memoria, fazendo deslocar
+																										  todo array.
+	
+EX-> DELEÇÕES 
+    *Se caso for preciso deletar um elemento, listas encadeadas neste caso se comporta melhor, pois somente pegar o elemento anterior
+     e apontar ao novo elemento.
+     Arrays tudo precisaria ser movido quando um elemento é eliminado.
+
+
+--> FATO IMPORTANTE
+    e intersante pensar que arrays e listas encadeadas podem funcionar bem juntos um forma hibrida numa composição de inserção, busca
+    extração de dados.
+    EX: digamos que esteja criando um sistema de agendamentos e lista de tarefas que pode ser utilizado em uma rede de salao de beleza,
+	este sistema deve incluir diversos tipos de serviços oferecido ao cliente e pode ser realizado no dia de seu agendamento.
+
+    Interessante pensar que será vários endereços de estabelecimento, uma base grande de clientes, tipos de serviços, funcionarios.
+	Nota que precisa ter uma base de dados muito densa e concisa, 
+	Utilizar arrays e lista para orquestra este fluxo de dados é bme interessante. EXEMPLO:
+	Cliente faz seu cadastro para conseguir realizar seu agendamento, onde temos 26 slot de arrays que aponta para listas encadeadas 
+	que organiza em ordem alfabetica os nomes, digamos que o cliente tem o nome de ANA, será alocado no SLOT 1 do array e feito a inserção
+	na lista encadeada subsequente.
+	No momento de busca o sistema pode utilizar a busca binária seja dentro do ARRAY selecionando a primeira letra e logo após nova busca
+	dentro da lista.
+	
+	
+
+--> ORDENAÇÃO POR SELEÇÃO
+    ordenação por seleção é um codigo bom mais não é muti rapido, o QUICKSORT é um algoritmo mais rapido e tem tempo de O(n log n)
+	EX:
+	   function buscaMenor(array) {
+	   menor = array[0];
+	   meno.indice = 2;
+	   for i in range(1, len(array))
+	      if array[i] < menor:
+		      menor = array[0];
+	          meno.indice = i;
+	   return menor_indice
+																		
+																		
+ 
+ 

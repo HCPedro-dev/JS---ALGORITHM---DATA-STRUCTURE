@@ -1,0 +1,88 @@
+----- NOTAÇÃO BIG O -----
+
+--> Notação Big O é uma notação especial que diz o quão rápido é um algoritmo;
+    Ela informa o quão rápido é um algoritmo, imagine que voce tem uma lista de tamanho N.
+	O tempo de execução na notação BIG O é O(n) a notação big O permite que compare o número
+	de operações.
+	OBS: descreve o comportamente limitante de uma funcao quando o argumento tende a um valor
+	especifico ou ao infinito. Ela descreve a complexidade do seu codigo usando termos algebricos.
+	
+	big O(n), n = numero de operações 
+	
+	isso fornece o número de operações que um algoritmo realiza. É chamado de notação BIG O;
+	
+	EXEMPLO:
+	digamos que tenha que desenhar em uma folha 16 divisões, se começa a desenha cada divisão
+	lembrando que cada divisão é uma operação, a notação BIG O vem para testar o desempenho desta
+	operação, certa forma irá desenhar 16 vezes.
+	
+	Agora se realizar desta forma, dobre o papel pela metade em um número de 4 vezes ao final 
+	desdobre todo o papel, irá notar que o papel se dividiu em 16, utilizando somente 4 operações;
+	
+	A notação BIG O irá estabelece o tempo de execução para a pior hipótese;
+	* Rapidez de um algoritmo não é medida em segundos, mas pelo crescimento de número de operações;
+	* Discutimos sobre o quão rapidamente o tempo de execução de um algorimo aumenta conforme o número
+	de elementos aumenta.
+	* O tempo de execução em algoritmos é expresso na notação Big O;
+	* O(log n) é mais rápido do que o O(n), e O(log n), fica ainda mais rápido conforma lista aumenta.
+	
+--> EXERCICIO
+1.1 -> Voce tem um nome e deseja encontrar o numero de telefone para esse nome em uma agenda? 7 
+1.2 -> Suponha que voce duplique o tamanho da lista. Qual seria o número máximo de etapas agora? 8
+
+
+
+--> TEMPO DE EXECUÇÃO
+    Falando sobre tempod de algoritmo, importante é o seu desempenho e agilizadade na exução dos dados 
+	da tarefa predeterminada, se caso fossse preciso percorrer uma lista com 100 objetos e precisassemos 
+	encontrar 1 objeto, se utilizar pesquisa simples, naturalmente ja sabemos que teriamos 100 itens para 
+	realizar a busca e se caso essas lista aumentar, se aumenta o tempo de execução e tempo de busca.
+	
+	A pesquisa binária é diferente, se a lista tem 100 itens precisa-se no final de no maximo 7 tentativas
+	caso tivesse 4 bilhões, precisaria somente 32.
+    Ou seja a razao de crescimento de execução é muito menor em razao ao aumento de itens na lista.
+	Se chama TEMPO LOGARÍTMICO.
+	
+	PESQUISA SIMPLES
+	100 ITENS > 100 PALPITES = O(N)
+	
+	PESQUISA BINÁRIA
+	100 ITENS > 7 PALPITES = O(log n)
+	
+	
+	
+--> ALGUNS EXEMPLOS COMUNS DE TEMPO DE EXECUÇÃO BIG O 
+
+    * O(log n), também conhecido como tempo logarítmico. Exemplo: pesquisa binária;
+	* O(n), conhecido como tempo linear. Exemplo: pesquisa simples;
+	* O(n * log n). Exemplo: um algoritmo rápido de ordenação, como a ordenação quicksort;
+	* O(n2). Exemplo: um algoritmo lento de ordenação, como a ordenação por seleção;
+	* O(n!). Exemplo: um algoritmo bastante lento, como o do caixeiro-viajante;
+	
+
+--> O CAIXEIRO-VIAJANTE 
+    
+	Observado as informações anteriores a principio nunca iria ser executado um algoritmo O(n!).
+	Este é um problema antigo e famoso na computação, pois seu crescimendo é apavorante e algumas
+	pessoas muito inteligentes acreditam que ele possa ser melhorado.
+	
+	O caixeiro precisa viajar 5 cidades, mas percorrendo uma distância mínima. Existe varidas formas
+	de se analisar, existe 120 combinações para viajar 5 cidades, para 6 sobe para 720 e para 7 5.050
+	nota que o numero aumenta exponencialmente o numero de combinações enquanto o numero de cidades 
+	cresce a curto passos.
+	
+	
+	IMPORTANTE LER SOBRE: 
+	ARVORES BINÁRIAS DE BUSCA.
+	
+	
+	
+
+--> RECAPITULANDO 
+    * A pesquisa binaria é mais rapida do que a pesquisa simples;
+	* O(log n) é mais rapido do que O(n) e O(log n) fica ainda mais rapido conforme os elementos da 
+	lista aumentam;
+	* A rapidez de um algoritmo não é medida em segundos;
+	* O tempo de execução de um algoritmo é medido por meio de seu crescimento;
+	* O tem de execução dos algoritmos é expresso na notação big O;
+	
