@@ -5,7 +5,7 @@ Repositório destinado ao estudo de algoritmos e estrutura de dados, utilizando 
 # OBJETIVO
 Este repositório tem como finalidade registrar o estudo contínuo de Algoritmos e Estruturas de Dados utilizando a linguagem JavaScript. Durante esse processo, serão explorados diferentes conceitos teóricos e aplicados exercícios práticos para consolidar o aprendizado.
 
-O foco será em desenvolver habilidades de resolução de problemas, otimização de código e análise de complexidade, com base em materiais de estudo e prática de plataformas renomadas.V
+O foco será em desenvolver habilidades de resolução de problemas, otimização de código e análise de complexidade, com base em materiais de estudo e prática de plataformas renomadas.
 
 
 # Materiais de Estudo
